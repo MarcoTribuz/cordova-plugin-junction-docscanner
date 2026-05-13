@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-junction-docscanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>JunctionDocScanner</name>
+  <description>Native document scanner: VisionKit on iOS 13+, ML Kit on Android with GMS.</description>
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=10.0.0"/>
+    <engine name="cordova-ios" version=">=6.0.0"/>
+    <engine name="cordova-android" version=">=10.0.0"/>
+  </engines>
+
+  <js-module src="www/docscanner.js" name="DocScanner">
+    <clobbers target="cordova.plugins.docscanner"/>
+  </js-module>
+
+  <!-- Android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="JunctionDocScanner">
+        <param name="android-package" value="com.marcotribuzio.junction.docscanner.JunctionDocScanner"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/JunctionDocScanner.java"
+                 target-dir="src/com/marcotribuzio/junction/docscanner"/>
+
+    <framework src="com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1"/>
+  </platform>
+
+  <!-- iOS -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="JunctionDocScanner">
+        <param name="ios-package" value="JunctionDocScanner"/>
+        <param name="onload" value="false"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/ios/JunctionDocScanner.swift"/>
+    <framework src="VisionKit.framework"/>
+  </platform>
+</plugin>

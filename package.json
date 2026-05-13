@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-junction-docscanner",
+  "version": "1.0.0",
+  "description": "Native document scanner (VisionKit iOS / ML Kit Android) returning JPEG base64 pages.",
+  "cordova": {
+    "id": "cordova-plugin-junction-docscanner",
+    "platforms": ["android", "ios"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcoTribuz/cordova-plugin-junction-docscanner.git"
+  },
+  "keywords": ["ecosystem:cordova", "cordova-android", "cordova-ios", "scanner", "vision", "ml-kit"],
+  "author": "Marco Tribuzio",
+  "license": "MIT"
+}
