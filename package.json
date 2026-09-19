@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-junction-docscanner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Native document scanner (VisionKit iOS / ML Kit Android) returning JPEG base64 pages.",
   "cordova": {
     "id": "cordova-plugin-junction-docscanner",

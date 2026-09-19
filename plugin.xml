@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cordova-plugin-junction-docscanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cordova-plugin-junction-docscanner" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>JunctionDocScanner</name>
   <description>Native document scanner: VisionKit on iOS 13+, ML Kit on Android with GMS.</description>
   <license>MIT</license>
@@ -7,7 +7,6 @@
   <engines>
     <engine name="cordova" version=">=10.0.0"/>
     <engine name="cordova-ios" version=">=6.0.0"/>
-    <engine name="cordova-android" version=">=10.0.0"/>
   </engines>
 
   <js-module src="www/docscanner.js" name="DocScanner">
